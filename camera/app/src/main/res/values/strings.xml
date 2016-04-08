@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Mstar测试应用</string>
+    <string name="title_activity_main">测试主页</string>
+    <string name="SelectServersIP">服务器IP地址:</string>
+    <string name="default_IP">http://172.21.17.210</string>
+    <string name="zhibo">直播</string>
+    <string name="dianbo">点播</string>
+    <string name="title_activity_zhibo_fullscreen">ZhiboFullscreenActivity</string>
+    <string name="bofang">播放</string>
+    <string name="zhanting">暂停</string>
+    <string name="title_activity_direact_fullscreen">直播测试</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_vodfullscreen">点播测试</string>
+    <string name="total_zeror">00:00</string>
+    <string name="audioTrackList">音轨</string>
+    <string name="playerseek">快进</string>
+    <string name="playerseekback">快退</string>
+    <string name="shipintonghua">视频通话</string>
+    <string name="shipintonghuaceshi">视频通话测试</string>
+
+    <string name ="filelist">文件列表</string>
+    <string name="selectlist">多媒体配置选项</string>
+
+    <string name="title_activity_camer_fullscreen">视频通话测试</string>
+    <string name="preview_button">预览</string>
+    <string name="start_encoder_and_decoder">编解码测试</string>
+    <string name="fenbianlv">分辨率</string>
+    <string name="bitratelist">比特率</string>
+    <string name="previewformat_type">预览格式</string>
+</resources>

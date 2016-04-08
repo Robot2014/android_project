@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="com.mstarsemi.mynetworkplayerapplication.DireactFullscreenActivity">
+
+    <SurfaceView android:id="@+id/zhiboSurfaceView"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"/>
+
+    <TextView android:id="@+id/channelDisplay"
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_gravity="right|top"
+        android:textSize="40sp"
+        android:textColor="#ffff0000"
+        android:focusable="false"/>
+
+    <LinearLayout android:id="@+id/DirectFileListLayout" style="?metaButtonBarStyle"
+        android:layout_width="500dp" android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/black_overlay"
+        android:orientation="vertical" tools:ignore="UselessParent">
+
+        <ListView android:id="@+id/DirectFileListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+        </ListView>
+
+    </LinearLayout>
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <TextView android:id="@+id/DirectsubtitletextDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|center"
+            android:gravity="center_horizontal"
+            android:background="@color/black_overlay"
+            android:visibility="gone"/>
+
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:weightSum="10">
+
+            <Spinner android:id="@+id/DirectAudioTrackList"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:prompt="@string/audioTrackList"
+                android:visibility="gone"/>
+
+            <Spinner android:id="@+id/DirectSubtitleTrackList"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:prompt="@string/audioTrackList"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@mipmap/back"
+    tools:context="com.mstarsemi.mynetworkplayerapplication.MainActivity">
+
+    <TextView android:text="@string/SelectServersIP"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextServerIp"
+        android:focusable="false" />
+
+    <EditText
+        android:id="@+id/EditTextIp"
+        style="?android:attr/textViewStyle"
+        android:text="@string/default_IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/TextServerIp"
+        android:layout_alignBottom="@+id/TextServerIp"
+        android:background="@null"
+        android:textColor="#ffff0000"/>
+
+    <Button android:text="@string/zhibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextServerIp"
+        android:id="@+id/ZhiboButton"
+        android:layout_alignLeft="@+id/TextServerIp"
+        />
+    <Button android:text="@string/dianbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DianboButton"
+        android:layout_toRightOf="@+id/ZhiboButton"
+        android:layout_alignBottom="@+id/ZhiboButton"
+        />
+
+    <Button android:text="@string/shipintonghua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ShipintonghuaButton"
+        android:layout_toRightOf="@+id/DianboButton"
+        android:layout_alignBottom="@+id/DianboButton"
+        />
+
+    <TextView android:text="@string/selectlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_config"
+        android:layout_below="@+id/ZhiboButton"
+        android:layout_alignLeft="@+id/ZhiboButton"
+        android:focusable="false"
+        />
+
+    <CheckBox android:id="@+id/select_fastStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_config"
+        android:text="FastStart机制"
+        />
+
+    <CheckBox android:id="@+id/select_freerun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/select_fastStar"
+        android:layout_alignBottom="@+id/select_fastStar"
+        android:text="FreeRun机制"
+        />
+</RelativeLayout>

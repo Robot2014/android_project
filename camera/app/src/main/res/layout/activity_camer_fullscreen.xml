@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="com.mstarsemi.mynetworkplayerapplication.CamerFullscreenActivity">
+
+    <LinearLayout android:id="@+id/fullscreen_surfaceview_controls" style="?metaButtonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <SurfaceView
+            android:id="@+id/preivew_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <SurfaceView
+            android:id="@+id/decoder_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/preview_fps"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical|left"/>
+
+    <TextView android:id="@+id/encoder_fps"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical|right"/>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:layout_weight="4">
+
+
+            <Spinner android:id="@+id/fenbianlv_spinner"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/fenbianlv" />
+
+            <Spinner android:id="@+id/previewformat_type_spinner"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/previewformat_type" />
+
+            <Button android:id="@+id/preview_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/preview_button" />
+
+            <Spinner android:id="@+id/bitratelist_spinner"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bitratelist" />
+
+            <Button android:id="@+id/start_test_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_encoder_and_decoder"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
